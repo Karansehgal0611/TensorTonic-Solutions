@@ -1,11 +1,13 @@
 import pandas as pd
 
 def select_column(data, column):
+    """
+    Returns: dict with 'values' (list) and 'length' (int)
+    """
     df = pd.DataFrame(data)
-    col_required = df[column]
-    result = {
-        "values" : col_required.tolist(),
-        "length" : len(col_required)
+    df_selected = df[column]
+    return {
+        "values" : df_selected.values.tolist(),
+        "length" : len(df_selected)
     }
-    return result
     pass
