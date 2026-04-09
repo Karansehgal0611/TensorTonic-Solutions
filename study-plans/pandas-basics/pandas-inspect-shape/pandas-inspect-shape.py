@@ -11,7 +11,7 @@ def inspect_dataframe(data):
         "rows" : int(shape[0]),
         "cols" : int(shape[1]),
         "columns" : df.columns.tolist(),
-        "dtypes" : {col:str(dtype) for col, dtype in df.dtypes.items()},
+        "dtypes" : {col:str(dtypes) for col,dtypes in df.dtypes.items()},
         "total_values" : int(df.size)
     }
     pass
